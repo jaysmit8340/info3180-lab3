@@ -37,7 +37,7 @@ def contact():
             message=request.form['message']
             email=request.form['email']
             subject=request.form['subject']
-            msg=Message(request.form['subject'], sender=(request.form['name'],request.form['email']),recipients=["jasonsmit95@gmail.com"])
+            msg=Message(request.form['subject'], sender=(request.form['name'],request.form['email']),recipients=["to@example.com"])
             msg.body=request.form['message']
             mail.send(msg)
             flash("Email has been sent successfully")
